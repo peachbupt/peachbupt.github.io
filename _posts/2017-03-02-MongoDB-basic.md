@@ -8,7 +8,7 @@ CAP是分布式系统的基本原则，CAP理论断言任何基于网络的数�
 
 理解CAP理论的最简单方式是想象两个节点分处分区两侧。允许至少一个节点更新状态会导致数据不一致，即丧失了C性质。如果为了保证数据一致性，将分区一侧的节点设置为不可用，那么又丧失了A性质。除非两个节点可以互相通信，才能既保证C又保证A，这又会导致丧失P性质。一般来说跨区域的系统，设计师无法舍弃P性质，那么就只能在数据一致性和可用性上做一个艰难选择。不确切地说，NoSQL运动的主题其实是创造各种可用性优先、数据一致性其次的方案；而传统数据库坚守ACID特性（原子性、一致性、隔离性、持久性），做的是相反的事情。^[2]
 
-![DataBase and CAP](../images/posts/2017-03-02/database_and_cap.png)
+![DataBase and CAP](/images/posts/2017-03-02/database_and_cap.png)
 
 ## ACID and BASE
 
@@ -85,14 +85,14 @@ mongodb 查询数据的语法格式如下.
 Pymongo和MongoEngine是Python中操作MongoDB的两个库。Pymongo是利用Python语言封装了上述MongoDB的API，并以JSON格式的数据作为输入和输出。而MongoEngine是介于DataBase和Model之间的ORM层，它定义了Model层操作数据库Document的一些固定schema，因此可以通过访问类成员变量的方式访问数据库collection中的Document数据。
 
 ##reference
-[1] https://www.quora.com/What-is-the-relation-between-SQL-NoSQL-the-CAP-theorem-and-ACID
+* [1] https://www.quora.com/What-is-the-relation-between-SQL-NoSQL-the-CAP-theorem-and-ACID
 
-[2] http://www.infoq.com/cn/articles/cap-twelve-years-later-how-the-rules-have-changed/
+* [2] http://www.infoq.com/cn/articles/cap-twelve-years-later-how-the-rules-have-changed/
 
-[3] http://blog.nahurst.com/visual-guide-to-nosql-systems
+* [3] http://blog.nahurst.com/visual-guide-to-nosql-systems
 
-[4] https://www.quora.com/Why-cant-a-distributed-NoSQL-database-support-all-CAP-rules
+* [4] https://www.quora.com/Why-cant-a-distributed-NoSQL-database-support-all-CAP-rules
 
-[5] http://www.runoob.com/mongodb/nosql.html
+* [5] http://www.runoob.com/mongodb/nosql.html
 
-[6] http://stackoverflow.com/questions/5712857/pymongo-vs-mongoengine-for-django
+* [6] http://stackoverflow.com/questions/5712857/pymongo-vs-mongoengine-for-django
