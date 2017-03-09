@@ -37,6 +37,8 @@ Windows Access Control基本的单元是**进程(线程)**和**securable object*
 
 Windows系统的security properties列举出了一个文件的所有安全描述符。下面的demo从进程中获取access token，然后从access token得到相关的进程所属于的用户和用户组以及操作系统允许的privilege. 同理这个demo的另外一部分会读取某个文件的security descriptor并检测当前用户是否有权限write这个文件.
 
+https://github.com/peachbupt/Lab/tree/master/WindowsACLDemo
+
 ![](/images/posts/2017-03-07/acl_model_demo.png)
 
 ### Client/Server Access Control
@@ -51,6 +53,7 @@ Clinet/Server Access Control是指如何在一个进程/线程中用另外一个
 ### Client/Server Access demo
 
 这个demo会在SYSTEM用户目录下以当前的登录用户打开一个技术本。具体做法为，在**PSEXEC**中以SYSTEM权限执行demo程序，demo程序会在用户session中查找explorer并复制用户的access token，然后调用**CreateProcessWithUser**在用户的session中impersonate一个记事本进程。
+https://github.com/peachbupt/Lab/tree/master/WindowsACLDemo
 
 ![](/images/posts/2017-03-07/demo.png)
 
@@ -80,12 +83,10 @@ MSDN上的这一段看得我莫名其妙，看上去是在讲windows server 2003
 ### Mandatory Integrity Control demo
 
 Demo中的程序会读取当前用户的Integrity Level, 另外一个函数在High Level的进程中以**SID: S-1-16-4096**创建一个low IL level运行的notepad.
+https://github.com/peachbupt/Lab/tree/master/WindowsACLDemo
 
 ![](/images/posts/2017-03-07/create_low_IL_process.png)
 
-### User Account Control
-
-UAC可以看做
 
 
 
