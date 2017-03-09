@@ -3,13 +3,13 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
 
- <title>Jinxing Hu</title>
+ <title>Peach Bupt</title>
  <link href="https://peachbupt.github.io/atom.xml" rel="self"/>
  <link href="https://github.com/peachbupt"/>
  <updated>{{ site.time | date_to_xmlschema }}</updated>
  <id>https://peachbupt.github.io/</id>
  <author>
-   <name>Jinxing Hu</name>
+   <name>Peach Bupt</name>
    <email>peachbupt@gmail.com</email>
  </author>
 
